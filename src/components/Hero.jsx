@@ -129,7 +129,7 @@ export default function Hero() {
   }
 
   return (
-    <div className=" flex flex-col  justify-center ">
+    <div className=" flex flex-col  justify-center lg:p-4 ">
     <header className="flex items-center justify-content flex-col ">
     <div>
     <IoLanguage/>
@@ -181,7 +181,7 @@ export default function Hero() {
           {errorMessage}
         </div>
       )}
-      <div className="w-full flex rounded-md p-4 border-t border-gray-300 focus:outline-none focus:border-blue-500 ">
+      <div className="w-full flex rounded-md pl-4  border-t border-gray-300 focus:outline-none focus:border-blue-500 h-30 ">
       <input 
         type="text"
         value={inputText}
@@ -192,7 +192,7 @@ export default function Hero() {
       />
        <button 
           onClick={handleSubmit}
-          className="p-6 bg-blue-500 text-white hover:bg-blue-600 border-t border-blue-600 rounded-md"
+          className="p-6 bg-blue-500 text-white hover:bg-blue-600 border-t border-blue-600 "
         ><BsFillSendFill/>
         
         </button>
