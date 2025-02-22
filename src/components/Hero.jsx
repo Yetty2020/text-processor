@@ -129,8 +129,8 @@ export default function Hero() {
   }
 
   return (
-    <div className=" flex flex-col  justify-center lg:p-4 ">
-    <header className="flex items-center justify-content flex-col ">
+    <div className=" flex flex-col  justify-center p-3 lg:p-4 ">
+    <header className="flex items-center justify-content flex-col pb-4 ">
     <div>
     <IoLanguage/>
         <h2 className="text-3xl font-bold text-center ">
@@ -139,11 +139,11 @@ export default function Hero() {
         </div>
         <p>How can we help you?</p>
     </header>
-    <div className="mb-20">
+    <div className="mb-20 overflow-y-auto z-0 pb-4">
         {displayTexts.map((item, index) => (
           <div key={index} className="flex flex-col items-end">
-            <Detector text={item.text} className="text-right self-end" />
-            <div className=" flex items-center gap-2 border border-blue max-w-fit p-3 rounded-lg self-start">
+            <Detector text={item.text} className="text-right self-end shadow-xl bg-grey" />
+            <div className=" flex items-center gap-2 border border-blue max-w-fit p-3 rounded-lg self-start mb-4">
             <span><IoLanguage/></span>
               <span className="text-lg text-gray-600">
                 Detected Language: {item.language}
@@ -161,7 +161,7 @@ export default function Hero() {
           {isLoading ? 'Summarizing...' : 'Summarize'}
         </button>
         {summaries[item.id] && (
-                <div className=" p-3 bg-gray-100 rounded self-start">
+                <div className=" p-3 bg-gray-100 rounded self-start mt-3">
                  
                   <p>{summaries[item.id]}</p>
                 </div>
@@ -175,13 +175,13 @@ export default function Hero() {
         ))}
       </div>
 
-        <section className="flex flex-col-reverse fixed bottom-0 left-0 w-full  ">
+        <section className="flex flex-col-reverse fixed bottom-0 left-0 w-full z-10 bg-white pt-6 ">
         {errorMessage && (
         <div className="bg-red-100 text-red-700 p-2 text-center">
           {errorMessage}
         </div>
       )}
-      <div className="w-full flex rounded-md pl-4  border-t border-gray-300 focus:outline-none focus:border-blue-500 h-30 ">
+      <div className="w-full flex rounded-lg pl-4   border-t border-gray-300 focus:outline-none focus:border-blue-500 lg:h-30 h-15  ">
       <input 
         type="text"
         value={inputText}
