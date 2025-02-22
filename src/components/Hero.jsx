@@ -129,9 +129,9 @@ export default function Hero() {
   }
 
   return (
-    <div className=" flex flex-col  justify-center p-3 lg:p-4 lg:px-6 ">
+    <div className=" flex flex-col  justify-center p-3 lg:p-4 lg:px-6   ">
     <header className="flex items-center justify-content flex-col pb-4 ">
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap">
     <IoLanguage className="text-xl"/>
         <h2 className="text-3xl font-bold text-center ">
             AI LANGUAGE DETECTOR, TRANSLATOR AND SUMMARIZER.
@@ -139,7 +139,7 @@ export default function Hero() {
         </div>
         <p>How can we help you?</p>
     </header>
-    <div className="mb-20 overflow-y-auto z-0 pb-4">
+    <div className="mb-20  z-0 pb-40">
         {displayTexts.map((item, index) => (
           <div key={index} className="flex flex-col items-end">
             <Detector text={item.text} className="text-right self-end shadow-xl bg-grey" />
@@ -161,7 +161,7 @@ export default function Hero() {
           {isLoading ? 'Summarizing...' : 'Summarize'}
         </button>
         {summaries[item.id] && (
-                <div className=" p-3 bg-gray-100 rounded self-start mt-3">
+                <div className=" p-3 bg-gray-100 rounded self-start mt-3 mb-6">
                  
                   <p>{summaries[item.id]}</p>
                 </div>
