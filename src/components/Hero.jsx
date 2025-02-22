@@ -129,10 +129,10 @@ export default function Hero() {
   }
 
   return (
-    <div className=" flex flex-col  justify-center p-3 lg:p-4 ">
+    <div className=" flex flex-col  justify-center p-3 lg:p-4 lg:px-6 ">
     <header className="flex items-center justify-content flex-col pb-4 ">
-    <div>
-    <IoLanguage/>
+    <div className="flex items-center gap-3">
+    <IoLanguage className="text-xl"/>
         <h2 className="text-3xl font-bold text-center ">
             AI LANGUAGE DETECTOR, TRANSLATOR AND SUMMARIZER.
         </h2>
